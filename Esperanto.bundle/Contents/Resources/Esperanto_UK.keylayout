@@ -7,7 +7,7 @@
   -   https://github.com/jakwings/mac-keyboard-Esperanto
   -
   - Installation:
-  -   Just drop it in the directory ~/Library/Keyboard Layouts
+  -   Just drop it in the directory "~/Library/Keyboard Layouts".
   -   "~" is your home directory. (e.g. /Users/ada)
   -   Then in the system preferences add this layout from the Other section.
   -
@@ -15,26 +15,30 @@
   -   * Based on the UK layout of the English Apple keyboard.
   -   * More latin letters from the combinations of accents and letters.
   -   * Support the x-system:
-  -       c + x/X = ĉ, C + x/X = Ĉ
-  -       g + x/X = ĝ, G + x/X = Ĝ
-  -       h + x/X = ĥ, H + x/X = Ĥ
-  -       j + x/X = ĵ, J + x/X = Ĵ
-  -       s + x/X = ŝ, S + x/X = Ŝ
-  -       u + x/X = ŭ, U + x/X = Ŭ
-  -   * Use ESC or Tab or irrelevant keys to cancel any incomplete combination:
-  -       c + Tab = c, C + Tab = C
-  -       g + Tab = g, G + Tab = G
-  -       h + Tab = h, H + Tab = H
-  -       j + Tab = j, J + Tab = J
-  -       s + Tab = s, S + Tab = S
-  -       u + Tab = u, U + Tab = U
+  -       c + x/X = ĉ  |  C + x/X = Ĉ
+  -       g + x/X = ĝ  |  G + x/X = Ĝ
+  -       h + x/X = ĥ  |  H + x/X = Ĥ
+  -       j + x/X = ĵ  |  J + x/X = Ĵ
+  -       s + x/X = ŝ  |  S + x/X = Ŝ
+  -       u + x/X = ŭ  |  U + x/X = Ŭ
+  -       c + x + x = cxx  |  C + x + x = Cxx  | c + X + x = cXx  | ...
+  -       ...(similarly for g/h/j/s/u + x/X + x/X)...
+  -   * Use ESC or Tab or irrelevant keys to cancel incomplete combinations:
+  -       c + Tab = c  |  C + Tab = C
+  -       g + Tab = g  |  G + Tab = G
+  -       h + Tab = h  |  H + Tab = H
+  -       j + Tab = j  |  J + Tab = J
+  -       s + Tab = s  |  S + Tab = S
+  -       u + Tab = u  |  U + Tab = U
+  -       c + x + Tab = ĉ  (c + x + Tab ≠ cx)  |  ...
   -       S + u + g + a + r + c + o + a + t + i + n + g + . = Sugarcoating.
   -
   - License:
   -   Copyright © 2015 Jak Wings
   -   All files are released to the public domain.
+  -   http://creativecommons.org/publicdomain/zero/1.0/
   -
-  - Last update: January 15, 2019
+  - Last update: May 23, 2021
   -->
 
 <!--
@@ -1499,35 +1503,83 @@
       <when state="none" output="x"/>
       <when state="Diaeresis" output="ẍ"/>
       <when state="Dot" output="ẋ"/>
-      <when state="c" output="ĉ"/>
-      <when state="C" output="Ĉ"/>
-      <when state="g" output="ĝ"/>
-      <when state="G" output="Ĝ"/>
-      <when state="h" output="ĥ"/>
-      <when state="H" output="Ĥ"/>
-      <when state="j" output="ĵ"/>
-      <when state="J" output="Ĵ"/>
-      <when state="s" output="ŝ"/>
-      <when state="S" output="Ŝ"/>
-      <when state="u" output="ŭ"/>
-      <when state="U" output="Ŭ"/>
+      <when state="c" next="cx"/>
+      <when state="C" next="Cx"/>
+      <when state="g" next="gx"/>
+      <when state="G" next="Gx"/>
+      <when state="h" next="hx"/>
+      <when state="H" next="Hx"/>
+      <when state="j" next="jx"/>
+      <when state="J" next="Jx"/>
+      <when state="s" next="sx"/>
+      <when state="S" next="Sx"/>
+      <when state="u" next="ux"/>
+      <when state="U" next="Ux"/>
+      <when state="cx" output="cxx"/>
+      <when state="Cx" output="Cxx"/>
+      <when state="gx" output="gxx"/>
+      <when state="Gx" output="Gxx"/>
+      <when state="hx" output="hxx"/>
+      <when state="Hx" output="Hxx"/>
+      <when state="jx" output="jxx"/>
+      <when state="Jx" output="Jxx"/>
+      <when state="sx" output="sxx"/>
+      <when state="Sx" output="Sxx"/>
+      <when state="ux" output="uxx"/>
+      <when state="Ux" output="Uxx"/>
+      <when state="cX" output="cXx"/>
+      <when state="CX" output="CXx"/>
+      <when state="gX" output="gXx"/>
+      <when state="GX" output="GXx"/>
+      <when state="hX" output="hXx"/>
+      <when state="HX" output="HXx"/>
+      <when state="jX" output="jXx"/>
+      <when state="JX" output="JXx"/>
+      <when state="sX" output="sXx"/>
+      <when state="SX" output="SXx"/>
+      <when state="uX" output="uXx"/>
+      <when state="UX" output="UXx"/>
     </action>
     <action id="X">
       <when state="none" output="X"/>
       <when state="Diaeresis" output="Ẍ"/>
       <when state="Dot" output="Ẋ"/>
-      <when state="c" output="ĉ"/>
-      <when state="C" output="Ĉ"/>
-      <when state="g" output="ĝ"/>
-      <when state="G" output="Ĝ"/>
-      <when state="h" output="ĥ"/>
-      <when state="H" output="Ĥ"/>
-      <when state="j" output="ĵ"/>
-      <when state="J" output="Ĵ"/>
-      <when state="s" output="ŝ"/>
-      <when state="S" output="Ŝ"/>
-      <when state="u" output="ŭ"/>
-      <when state="U" output="Ŭ"/>
+      <when state="c" next="cX"/>
+      <when state="C" next="CX"/>
+      <when state="g" next="gX"/>
+      <when state="G" next="GX"/>
+      <when state="h" next="hX"/>
+      <when state="H" next="HX"/>
+      <when state="j" next="jX"/>
+      <when state="J" next="JX"/>
+      <when state="s" next="sX"/>
+      <when state="S" next="SX"/>
+      <when state="u" next="uX"/>
+      <when state="U" next="UX"/>
+      <when state="cx" output="cxX"/>
+      <when state="Cx" output="CxX"/>
+      <when state="gx" output="gxX"/>
+      <when state="Gx" output="GxX"/>
+      <when state="hx" output="hxX"/>
+      <when state="Hx" output="HxX"/>
+      <when state="jx" output="jxX"/>
+      <when state="Jx" output="JxX"/>
+      <when state="sx" output="sxX"/>
+      <when state="Sx" output="SxX"/>
+      <when state="ux" output="uxX"/>
+      <when state="Ux" output="UxX"/>
+      <when state="cX" output="cXX"/>
+      <when state="CX" output="CXX"/>
+      <when state="gX" output="gXX"/>
+      <when state="GX" output="GXX"/>
+      <when state="hX" output="hXX"/>
+      <when state="HX" output="HXX"/>
+      <when state="jX" output="jXX"/>
+      <when state="JX" output="JXX"/>
+      <when state="sX" output="sXX"/>
+      <when state="SX" output="SXX"/>
+      <when state="uX" output="uXX"/>
+      <when state="UX" output="UXX"/>
     </action>
     <action id="y">
       <when state="none" output="y"/>
@@ -1668,6 +1720,30 @@
       <when state="S" output="S"/>
       <when state="u" output="u"/>
       <when state="U" output="U"/>
+      <when state="cx" output="ĉ"/>
+      <when state="Cx" output="Ĉ"/>
+      <when state="gx" output="ĝ"/>
+      <when state="Gx" output="Ĝ"/>
+      <when state="hx" output="ĥ"/>
+      <when state="Hx" output="Ĥ"/>
+      <when state="jx" output="ĵ"/>
+      <when state="Jx" output="Ĵ"/>
+      <when state="sx" output="ŝ"/>
+      <when state="Sx" output="Ŝ"/>
+      <when state="ux" output="ŭ"/>
+      <when state="Ux" output="Ŭ"/>
+      <when state="cX" output="ĉ"/>
+      <when state="CX" output="Ĉ"/>
+      <when state="gX" output="ĝ"/>
+      <when state="GX" output="Ĝ"/>
+      <when state="hX" output="ĥ"/>
+      <when state="HX" output="Ĥ"/>
+      <when state="jX" output="ĵ"/>
+      <when state="JX" output="Ĵ"/>
+      <when state="sX" output="ŝ"/>
+      <when state="SX" output="Ŝ"/>
+      <when state="uX" output="ŭ"/>
+      <when state="UX" output="Ŭ"/>
     </action><!-- } -->
   </actions><!-- } -->
 
@@ -1720,6 +1796,30 @@
     <when state="S" output="S"/>
     <when state="u" output="u"/>
     <when state="U" output="U"/>
+    <when state="cx" output="ĉ"/>
+    <when state="Cx" output="Ĉ"/>
+    <when state="gx" output="ĝ"/>
+    <when state="Gx" output="Ĝ"/>
+    <when state="hx" output="ĥ"/>
+    <when state="Hx" output="Ĥ"/>
+    <when state="jx" output="ĵ"/>
+    <when state="Jx" output="Ĵ"/>
+    <when state="sx" output="ŝ"/>
+    <when state="Sx" output="Ŝ"/>
+    <when state="ux" output="ŭ"/>
+    <when state="Ux" output="Ŭ"/>
+    <when state="cX" output="ĉ"/>
+    <when state="CX" output="Ĉ"/>
+    <when state="gX" output="ĝ"/>
+    <when state="GX" output="Ĝ"/>
+    <when state="hX" output="ĥ"/>
+    <when state="HX" output="Ĥ"/>
+    <when state="jX" output="ĵ"/>
+    <when state="JX" output="Ĵ"/>
+    <when state="sX" output="ŝ"/>
+    <when state="SX" output="Ŝ"/>
+    <when state="uX" output="ŭ"/>
+    <when state="UX" output="Ŭ"/>
   </terminators><!-- } -->
 
 </keyboard><!-- } -->

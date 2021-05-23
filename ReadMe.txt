@@ -28,21 +28,24 @@ Features:
 
   * Support the x-system:
 
-      c + x/X = ĉ, C + x/X = Ĉ
-      g + x/X = ĝ, G + x/X = Ĝ
-      h + x/X = ĥ, H + x/X = Ĥ
-      j + x/X = ĵ, J + x/X = Ĵ
-      s + x/X = ŝ, S + x/X = Ŝ
-      u + x/X = ŭ, U + x/X = Ŭ
+      c + x/X = ĉ  |  C + x/X = Ĉ
+      g + x/X = ĝ  |  G + x/X = Ĝ
+      h + x/X = ĥ  |  H + x/X = Ĥ
+      j + x/X = ĵ  |  J + x/X = Ĵ
+      s + x/X = ŝ  |  S + x/X = Ŝ
+      u + x/X = ŭ  |  U + x/X = Ŭ
+      c + x + x = cxx  |  C + x + x = Cxx  | c + X + x = cXx  | ...
+      ...(similarly for g/h/j/s/u + x/X + x/X)...
 
-  * Use ESC or Tab or irrelevant keys to cancel any incomplete combination:
+  * Use ESC or Tab or irrelevant keys to cancel incomplete combinations:
 
-      c + Tab = c, C + Tab = C
-      g + Tab = g, G + Tab = G
-      h + Tab = h, H + Tab = H
-      j + Tab = j, J + Tab = J
-      s + Tab = s, S + Tab = S
-      u + Tab = u, U + Tab = U
+      c + Tab = c  |  C + Tab = C
+      g + Tab = g  |  G + Tab = G
+      h + Tab = h  |  H + Tab = H
+      j + Tab = j  |  J + Tab = J
+      s + Tab = s  |  S + Tab = S
+      u + Tab = u  |  U + Tab = U
+      c + x + Tab = ĉ  (c + x + Tab ≠ cx)  |  ...
       S + u + g + a + r + c + o + a + t + i + n + g + . = Sugarcoating.
 
 
@@ -51,6 +54,7 @@ License:
   Copyright © 2015 Jak Wings
   License: Creative Commons Zero v1.0 Universal
   All files are released to the public domain.
+  http://creativecommons.org/publicdomain/zero/1.0/
 
   "Flag of Esperanto" by Gabriel Ehrnst Grundin
   Licensed under Public Domain via Wikimedia Commons
